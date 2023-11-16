@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" src="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title></title>
+</head>
+
+<body>
+ 
+
+  <div class="container">
+    <h1 id="first" class="text-center" style="background-color: #000; color: white; border-radius: 10px;">1st Round</h1>
+    <div class="div1">
+      <h3 id="qns" class="text-center" style="background-color: #000; color: white; border-radius: 10px;">MA Jinnah Road
+        ka Purana Name Kya Hai?</h3>
+      <p id="qns" class="text-center" style="background-color: #000; color: white; border-radius: 10px;">ایم اے جناح روڈ
+        کا پُرانا نام کیا ہے </p>
+      <h4 class="h4t" id="hintH2"></h4>
+    </div>
+    <a href="2th Rond.html">
+
+    </a>
+
+
+    <div class="Timer center text-center">
+
+      <h1 id="timer" style="background-color: #000; color: white; border-radius: 10px;     width: 70px;">24</h1>
+
+    </div>
+    <a href="./index.html"><i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
+
+    <hr class="bg-light">
+
+    <div class="row d-flex justify-content-around center" style="justify-content: center;">
+      <div class="col-md-2"></div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="A" id="a" onclick=btn()>(A)-Haroon Road</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="B responsive-content" id="b" onclick=btn()>(B)-Bin kazim Road</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="C responsive-content" id="c" onclick=btn(c)>(C)-Bandar Road</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="D responsive-content" id="d" onclick=btn()>(D)-Hashmi Road</a>
+
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <br>
+    <hr class="bg-light">
+    <div class="row center text-center">
+      <div class="col-md-2"></div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="btn50 " onclick=func50()><i class="fa fa-user"></i>-50/50</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="btnHint" onclick=funcHint()><i class="fa fa-header"></i>-Hint</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="btnLock"><i class="fa fa-handshake"></i>-Friends Calling</a>
+
+      </div>
+      <div class="col-md-2 glow-on-hover  m-2 pl-4 p-2">
+        <a class="btnPublic" onclick=funcpublic()><i class="fa fa-users"></i>-Audience</a>
+
+      </div>
+      <div class="col-md-2"></div>
+
+    </div>
+    <video autoplay  muted>
+      <source src="./KBC Answer Timing Sound Effects - Kaun Banega Crorepati.mp3" />
+    </video>
+  </div>
+
+  
+  <style>
+    @import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+    @media (min-width: 320px) {
+      .container {
+        background-image: url("./strat.png");
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    p {
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.5em;
+      direction: rtl;
+    }
+
+
+    body,
+    html {
+      height: 100%;
+    }
+
+    .center {
+      /* height: 200px; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body {
+      background-image: url("./strat.png");
+      height: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .glow-on-hover {
+      width: 180px;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: rgb(17, 17, 17);
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+      color: #000
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+  </style>
+</body>
+<script src="new.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  window.onload = function () {
+    document.querySelector("video").muted = false;
+  };
+</script>
+
+</html>
